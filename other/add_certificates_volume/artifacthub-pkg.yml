@@ -9,7 +9,6 @@ homeURL: https://github.com/kyverno/policies/tree/main/other/add_certificates_vo
 keywords:
   - kyverno
   - policy
-  - argo
 links:
   - name: Source
     url: https://github.com/kyverno/policies/blob/main/other/add_certificates_volume/add_certificates_volume.yaml
