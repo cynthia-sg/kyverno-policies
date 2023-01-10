@@ -30,6 +30,11 @@ readme: |
   it may be desired to restrict these to only known sources to prevent
   accessing outside sources. This policy verifies that each of the Flux
   sources comes from a trusted location.
+install: |-
+    ### Usage
+    ```shell
+    kubectl apply -f https://raw.githubusercontent.com/kyverno/policies/main/flux/verify-flux-sources/verify-flux-sources.yaml
+    ```
 annotations:
   kyverno/category: "Flux"
   kyverno/kubernetesVersion: "1.23"

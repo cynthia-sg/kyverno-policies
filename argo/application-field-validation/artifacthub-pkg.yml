@@ -27,6 +27,11 @@ readme: |
   This policy performs some best practices validation on Application fields.
   Path or chart must be specified but never both. And destination.name or
   destination.server must be specified but never both.
+install: |-
+    ### Usage
+    ```shell
+    kubectl apply -f https://raw.githubusercontent.com/kyverno/policies/main/argo/application-field-validation/application-field-validation.yaml
+    ```
 annotations:
   kyverno/category: "Argo"
   kyverno/kubernetesVersion: "1.23"
