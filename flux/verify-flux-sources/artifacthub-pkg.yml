@@ -1,0 +1,37 @@
+# Artifact Hub package metadata file
+version: 0.0.1
+name: verify-flux-sources
+displayName: Verify Flux Sources
+createdAt: 2023-01-10T00:00:00Z
+description: Policy verifies that each of the Flux sources comes from a trusted location
+license: Apache-2.0
+homeURL: https://github.com/kyverno/policies/tree/main/flux/verify-flux-sources
+keywords:
+  - kyverno
+  - policy
+  - flux
+links:
+  - name: Source
+    url: https://github.com/kyverno/policies/blob/main/flux/verify-flux-sources/verify-flux-sources.yaml
+changes:
+  - kind: added
+    description: Some new cool feature
+  - kind: fixed
+    description: A hard to reproduce annoying issue
+provider:
+  name: Kyverno community
+recommendations:
+  - url: https://artifacthub.io/packages/helm/kyverno/kyverno
+  - url: https://artifacthub.io/packages/helm/kyverno/kyverno-policies
+readme: |
+  Flux source APIs include a number of different sources such as
+  GitRepository, Bucket, HelmRepository, and ImageRepository resources. Each of these
+  by default can be pointed to any location. In a production environment,
+  it may be desired to restrict these to only known sources to prevent
+  accessing outside sources. This policy verifies that each of the Flux
+  sources comes from a trusted location.
+annotations:
+  kyverno/category: "Flux"
+  kyverno/kubernetesVersion: "1.23"
+  kyverno/subject: "GitRepository, Bucket, HelmRepository, ImageRepository"
+  kyverno/version: "1.6.0"

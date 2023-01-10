@@ -1,0 +1,34 @@
+# Artifact Hub package metadata file
+version: 0.0.1
+name: application-field-validation
+displayName: Application Field Validation
+createdAt: 2023-01-10T00:00:00Z
+description: Policy that performs some best practices validation on Application fields
+license: Apache-2.0
+homeURL: https://github.com/kyverno/policies/tree/main/argo/application-field-validation
+keywords:
+  - kyverno
+  - policy
+  - argo
+links:
+  - name: Source
+    url: https://github.com/kyverno/policies/blob/main/argo/application-field-validation/application-field-validation.yaml
+changes:
+  - kind: added
+    description: Some new cool feature
+  - kind: fixed
+    description: A hard to reproduce annoying issue
+provider:
+  name: Kyverno community
+recommendations:
+  - url: https://artifacthub.io/packages/helm/kyverno/kyverno
+  - url: https://artifacthub.io/packages/helm/kyverno/kyverno-policies
+readme: |
+  This policy performs some best practices validation on Application fields.
+  Path or chart must be specified but never both. And destination.name or
+  destination.server must be specified but never both.
+annotations:
+  kyverno/category: "Argo"
+  kyverno/kubernetesVersion: "1.23"
+  kyverno/subject: "Application"
+  kyverno/version: "1.6.0"
