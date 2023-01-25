@@ -32,6 +32,26 @@ install: |-
     ```shell
     kubectl apply -f https://raw.githubusercontent.com/kyverno/policies/main/argo/application-field-validation/application-field-validation.yaml
     ```
+images: |
+  - name: db-migrator
+    image: artifacthub/db-migrator:v1.11.0
+    platforms:
+      - linux/amd64
+      - linux/amrd64
+      - windows/amd64
+  - name: hub
+    image: artifacthub/hub:v1.11.0
+    platforms:
+      - linux/amd64
+  - name: tracker
+    image: artifacthub/tracker:v1.11.0
+  - name: scanner
+    image: artifacthub/scanner:v1.11.0
+    platforms:
+      - linux/amd64
+      - linux/amrd64
+  - name: trivy
+    image: aquasec/trivy:0.36.1
 annotations:
   kyverno/category: "Argo"
   kyverno/kubernetesVersion: "1.23"
