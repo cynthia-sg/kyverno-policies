@@ -32,7 +32,7 @@ install: |-
     ```shell
     kubectl apply -f https://raw.githubusercontent.com/kyverno/policies/main/argo/application-field-validation/application-field-validation.yaml
     ```
-images:
+containersImages:
   - name: db-migrator
     image: artifacthub/db-migrator:v1.11.0
     platforms:
